@@ -1,0 +1,37 @@
+.header {
+    background-image: radial-gradient( circle 592px at 48.2% 50%, #fffff9 0%, #c3cfe2 74.6% );
+    background-color: #c3cfe2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+    .header_navigationList {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 1em;
+        .header_link {
+            font-size: 1.3em;
+            margin: 1em;
+            color: #0a0a0a;
+            text-decoration: none;            
+            text-transform: uppercase;
+            &.header_link--active{
+                text-decoration: underline;
+            }
+        }
+    }
+    .header_titleBox{
+        color: #324259;
+        font-size: 2.5em;
+        margin: 1.2em 0 1.5em 0;
+        display: flex; 
+        align-items: center;
+        .header_title{
+            margin: 0 1em;
+        }
+        i {
+            font-size: 2em;
+        }
+    }
+}

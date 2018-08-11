@@ -1,0 +1,33 @@
+.game_answer {
+    width: 300px;
+    font-size: 12px;
+    margin: 1em;
+    padding: 1.6;
+    border-radius: 5px;
+    color: #fefefe;
+    background: #7a7a7a;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    .game_label, .game_input {
+        font-size: 1.5em;
+        text-align: center;
+        margin: 0.8em;
+    }
+    .game_text {
+        font-size: 1.5em;
+        text-align: center;
+        margin: 0 1em 1em 1em;
+        line-height: 1.5em;
+    }
+    .game_button {
+        font-size: 1.4em;
+        margin: 1em;
+        padding: 0.5em 1em;
+        font-weight: bold;
+        background: #fefefe;
+        color: #324259;
+        border-radius: 8px;   
+    }
+}

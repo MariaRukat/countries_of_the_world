@@ -1,0 +1,46 @@
+.selectForm{
+    width: 700px;
+    margin: 1em auto;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-content: space-around;
+    flex-wrap: wrap;
+    color: #7a7a7a;
+    .selectForm_mainTitle {
+        flex: 100%; 
+        font-size: 2em;
+        margin: 1em;
+        text-align: center;
+    }
+    .selectForm_box{
+        width: 22em;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 1em;
+        border-radius: 5px;
+        background: #7a7a7a;
+        color: #fefefe;
+        .selectForm_title {
+            font-size: 2em;
+            text-align: center;
+            margin: 1em 0;
+        }
+        .selectForm_select {
+            font-size: 1.3em;
+            padding: 0.5em;
+            margin: 1em 0;
+        }
+        .selectForm_button {
+            font-size: 1.4em;
+            padding: 0.6em 1.2em;
+            margin: 1em;
+            font-weight: bold;
+            background: #fefefe;
+            color: #324259;
+            border-radius: 8px;
+        }
+    }   
+}
