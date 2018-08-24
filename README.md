@@ -1,6 +1,10 @@
 # Countries of the world
 
-Simple web application that can help you get knowledge about countries. This project was made as a part of learning React. 
+Simple web page that can help you to learn more about the countries. I made this project to practice my skills in React. 
+
+##Demo
+
+Link: https://mariarukat.github.io/countries_of_the_world/dist/#/learn
 
 ## Technologies
 
@@ -16,6 +20,10 @@ It also uses:
 
 ## Features
 
-  * Search country by the name - you can see it on the map and get basic information
-  * Search countries by region _(e.g. Africa, Oceania)_ or by official langugage _(e.g. English, Arabic)_
-  * Check your knowledge of world map with the game
+  * Searching country by the name - you can see it on the map and aquire basic information
+  * Searching countries by region _(e.g. Africa, Oceania)_ or by official langugage _(e.g. English, Arabic)_
+  * Checking your knowledge of world map with a game
+
+## To-do
+  * Add a real-time suggestions into a searching tool
+  * Add Responsive Web Design
