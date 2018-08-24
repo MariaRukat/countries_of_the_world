@@ -2,7 +2,7 @@
 
 Simple web page that can help you to learn more about the countries. I made this project to practice my skills in React. 
 
-##Demo
+## Demo
 
 Link: https://mariarukat.github.io/countries_of_the_world/dist/#/learn
 
