@@ -1819,45 +1819,53 @@ var CountryDescription = function (_React$Component) {
         value: function render() {
             return _react2.default.createElement(
                 'div',
-                { className: 'countryInfo' },
+                { className: 'country-description' },
                 _react2.default.createElement(
                     'div',
-                    { className: 'countryInfo_text' },
+                    { className: 'country-description__text' },
                     _react2.default.createElement(
                         'h2',
-                        { className: 'countryInfo_name' },
+                        {
+                            className: 'country-description__name' },
                         this.props.countryData.name
                     ),
                     _react2.default.createElement(
                         'h3',
-                        { className: 'countryInfo_capital' },
-                        'Capital: ',
+                        {
+                            className: 'country-description__capital' },
+                        'Capital:',
                         this.props.countryData.capital
                     ),
                     _react2.default.createElement(
                         'p',
-                        { className: 'countryInfo_more' },
-                        'Currency: ',
+                        {
+                            className: 'country-description__more' },
+                        'Currency:',
                         this.props.countryData.currencies.map(function (elem) {
                             return elem.name + ', ';
                         })
                     ),
                     _react2.default.createElement(
                         'p',
-                        { className: 'countryInfo_more' },
-                        'Official languages: ',
+                        {
+                            className: 'country-description__more' },
+                        'Official languages:',
                         this.props.countryData.languages.map(function (elem) {
                             return elem.name + ', ';
                         })
                     ),
                     _react2.default.createElement(
                         'a',
-                        { className: 'countryInfo_link', target: '_blank',
+                        {
+                            className: 'country-description__link',
+                            target: '_blank',
                             href: 'https://en.wikipedia.org/wiki/' + this.props.countryData.name },
                         'More on Wikipedia'
                     )
                 ),
-                _react2.default.createElement('img', { src: this.props.countryData.flag, className: 'countryInfo_flag' })
+                _react2.default.createElement('img', {
+                    src: this.props.countryData.flag,
+                    className: 'country-description__flag' })
             );
         }
     }]);
@@ -1944,30 +1952,36 @@ var CountryMap = function (_React$Component2) {
 
             return _react2.default.createElement(
                 'div',
-                { className: 'map' },
+                { className: 'country-map' },
                 _react2.default.createElement(
                     'div',
-                    { className: 'map_box' },
+                    { className: 'country-map__box' },
                     _react2.default.createElement(
                         'div',
-                        { className: 'map_buttons' },
+                        { className: 'country-map__buttons' },
                         _react2.default.createElement(
                             'button',
-                            { className: 'map_button', onClick: function onClick(event) {
+                            {
+                                className: 'country-map__button',
+                                onClick: function onClick(event) {
                                     return _this3.Viewer.zoomOnViewerCenter(1.1);
                                 } },
                             _react2.default.createElement('i', { className: 'fas fa-plus' })
                         ),
                         _react2.default.createElement(
                             'button',
-                            { className: 'map_button', onClick: function onClick(event) {
+                            {
+                                className: 'country-map__button',
+                                onClick: function onClick(event) {
                                     return _this3.Viewer.zoomOnViewerCenter(0.9);
                                 } },
                             _react2.default.createElement('i', { className: 'fas fa-minus' })
                         ),
                         _react2.default.createElement(
                             'button',
-                            { className: 'map_button', onClick: function onClick(event) {
+                            {
+                                className: 'country-map__button',
+                                onClick: function onClick(event) {
                                     return _this3.Viewer.fitToViewer();
                                 } },
                             _react2.default.createElement('i', { className: 'fas fa-home' })
@@ -3165,7 +3179,7 @@ var _App = __webpack_require__(47);
 
 var _App2 = _interopRequireDefault(_App);
 
-__webpack_require__(107);
+__webpack_require__(110);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -22672,7 +22686,11 @@ var _CountryGameApp = __webpack_require__(96);
 
 var _CountryGameApp2 = _interopRequireDefault(_CountryGameApp);
 
-__webpack_require__(105);
+var _NotFound = __webpack_require__(105);
+
+var _NotFound2 = _interopRequireDefault(_NotFound);
+
+__webpack_require__(108);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -22706,7 +22724,8 @@ var App = function (_React$Component) {
                         null,
                         _react2.default.createElement(_reactRouterDom.Route, { path: '/learn', component: _OneCountryApp2.default }),
                         _react2.default.createElement(_reactRouterDom.Route, { path: '/discover', component: _ManyCountriesApp2.default }),
-                        _react2.default.createElement(_reactRouterDom.Route, { path: '/play', component: _CountryGameApp2.default })
+                        _react2.default.createElement(_reactRouterDom.Route, { path: '/play', component: _CountryGameApp2.default }),
+                        _react2.default.createElement(_reactRouterDom.Route, { path: '*', component: _NotFound2.default })
                     )
                 )
             );
@@ -25291,13 +25310,16 @@ var Header = function (_React$Component) {
                     null,
                     _react2.default.createElement(
                         'ul',
-                        { className: 'header_navigationList' },
+                        { className: 'header__navigation-list' },
                         _react2.default.createElement(
                             'li',
                             null,
                             _react2.default.createElement(
                                 _reactRouterDom.NavLink,
-                                { to: '/learn', className: 'header_link', activeClassName: 'header_link--active' },
+                                {
+                                    to: '/learn',
+                                    className: 'header__link',
+                                    activeClassName: 'header__link--active' },
                                 'Learn'
                             )
                         ),
@@ -25306,7 +25328,10 @@ var Header = function (_React$Component) {
                             null,
                             _react2.default.createElement(
                                 _reactRouterDom.NavLink,
-                                { to: '/discover', className: 'header_link', activeClassName: 'header_link--active' },
+                                {
+                                    to: '/discover',
+                                    className: 'header__link',
+                                    activeClassName: 'header__link--active' },
                                 'Discover'
                             )
                         ),
@@ -25315,7 +25340,10 @@ var Header = function (_React$Component) {
                             null,
                             _react2.default.createElement(
                                 _reactRouterDom.NavLink,
-                                { to: '/play', className: 'header_link', activeClassName: 'header_link--active' },
+                                {
+                                    to: '/play',
+                                    className: 'header__link',
+                                    activeClassName: 'header__link--active' },
                                 'Play'
                             )
                         )
@@ -25323,11 +25351,11 @@ var Header = function (_React$Component) {
                 ),
                 _react2.default.createElement(
                     'div',
-                    { className: 'header_titleBox' },
+                    { className: 'header__title-box' },
                     _react2.default.createElement('i', { className: 'fas fa-globe-americas' }),
                     _react2.default.createElement(
                         'h1',
-                        { className: 'header_title' },
+                        { className: 'header__title' },
                         'Countries of the world'
                     ),
                     _react2.default.createElement('i', { className: 'fas fa-globe-africa' })
@@ -25400,7 +25428,7 @@ exports = module.exports = __webpack_require__(3)(false);
 
 
 // module
-exports.push([module.i, ".header {\n  background-image: radial-gradient(circle 592px at 48.2% 50%, #fffff9 0%, #c3cfe2 74.6%);\n  background-color: #c3cfe2;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  font-size: 12px;\n}\n\n.header .header_navigationList {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  margin: 1em;\n}\n\n.header .header_navigationList .header_link {\n  font-size: 1.3em;\n  margin: 1em;\n  color: #0a0a0a;\n  text-decoration: none;\n  text-transform: uppercase;\n}\n\n.header .header_navigationList .header_link.header_link--active {\n  text-decoration: underline;\n}\n\n.header .header_titleBox {\n  color: #324259;\n  font-size: 2.5em;\n  margin: 1.2em 0 1.5em 0;\n  display: flex;\n  align-items: center;\n}\n\n.header .header_titleBox .header_title {\n  margin: 0 1em;\n}\n\n.header .header_titleBox i {\n  font-size: 2em;\n}", ""]);
+exports.push([module.i, ".header {\n  background-image: radial-gradient(circle 592px at 48.2% 50%, #fffff9 0%, #c3cfe2 74.6%);\n  background-color: #c3cfe2;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  font-size: 12px;\n}\n\n.header__navigation-list {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  margin: 1em;\n}\n\n.header__link {\n  font-size: 1.3em;\n  margin: 1em;\n  color: #0a0a0a;\n  text-decoration: none;\n  text-transform: uppercase;\n}\n\n.header__link--active {\n  text-decoration: underline;\n}\n\n.header__title-box {\n  color: #324259;\n  font-size: 2.5em;\n  margin: 1.2em 0 1.5em 0;\n  display: flex;\n  align-items: center;\n}\n\n.header__title {\n  margin: 0 1em;\n}\n\n.header i {\n  font-size: 2em;\n}", ""]);
 
 // exports
 
@@ -25581,11 +25609,14 @@ var OneCountryApp = function (_React$Component) {
                 null,
                 _react2.default.createElement(
                     'div',
-                    { className: 'main' },
-                    _react2.default.createElement(_CountrySearch2.default, { searchMethod: this.getData, error: this.state.errorInfo }),
+                    { className: 'one-country' },
+                    _react2.default.createElement(_CountrySearch2.default, {
+                        searchMethod: this.getData,
+                        error: this.state.errorInfo }),
                     !this.state.pending ? _react2.default.createElement(_CountryDescription2.default, { countryData: this.state.country }) : null
                 ),
-                _react2.default.createElement(_CountryMap2.default, { country: this.state.country })
+                _react2.default.createElement(_CountryMap2.default, {
+                    country: this.state.country })
             );
         }
     }]);
@@ -25656,23 +25687,28 @@ var CountrySearch = function (_React$Component) {
         value: function render() {
             return _react2.default.createElement(
                 'form',
-                { className: 'search' },
+                { className: 'country-search' },
                 _react2.default.createElement(
                     'label',
-                    { htmlFor: 'countryName',
-                        className: 'search_label' },
+                    {
+                        htmlFor: 'countryName',
+                        className: 'country-search__label' },
                     'Write the country name in:'
                 ),
-                _react2.default.createElement('input', { id: 'countryName', type: 'text', className: 'search_input',
-                    value: this.state.inputValue, onChange: this.handleInputChange }),
+                _react2.default.createElement('input', {
+                    id: 'countryName', type: 'text',
+                    className: 'country-search__input',
+                    value: this.state.inputValue,
+                    onChange: this.handleInputChange }),
                 _react2.default.createElement(
                     'p',
-                    { className: 'search_info' },
+                    { className: 'country-search__info' },
                     this.props.error
                 ),
                 _react2.default.createElement(
                     'button',
-                    { className: 'search_button',
+                    {
+                        className: 'country-search__button',
                         onClick: this.handleClick },
                     'Show the country'
                 )
@@ -25744,7 +25780,7 @@ exports = module.exports = __webpack_require__(3)(false);
 
 
 // module
-exports.push([module.i, ".search {\n  width: 24em;\n  font-size: 12px;\n  margin: 1em;\n  border-radius: 5px;\n  background: #324259;\n  color: #fefefe;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-evenly;\n  align-items: center;\n  position: relative;\n  z-index: 0;\n}\n\n.search:before {\n  content: '';\n  border: 1px dashed #cccccc;\n  position: absolute;\n  z-index: -1;\n  top: 5px;\n  bottom: 5px;\n  left: 5px;\n  right: 5px;\n}\n\n.search .search_label {\n  font-size: 1.5em;\n  text-align: center;\n  margin: 2em 0 1em 0;\n}\n\n.search .search_input {\n  background-color: #fefefe;\n  border: 2px solid #7a7a7a;\n  border-radius: 2px;\n  padding: 0.6em;\n  font-size: 1.5em;\n  margin: 1em 0;\n  text-align: center;\n}\n\n.search .search_button {\n  font-size: 1.4em;\n  font-weight: bold;\n  background: #fefefe;\n  color: #324259;\n  border-radius: 8px;\n  margin: 1em 0 2em 0;\n  padding: 0.6em 1em;\n}\n\n.search .search_info {\n  font-size: 1em;\n}", ""]);
+exports.push([module.i, ".country-search {\n  width: 24em;\n  font-size: 12px;\n  margin: 1em;\n  border-radius: 5px;\n  background: #324259;\n  color: #fefefe;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-evenly;\n  align-items: center;\n  position: relative;\n  z-index: 0;\n}\n\n.country-search:before {\n  content: '';\n  border: 1px dashed #cccccc;\n  position: absolute;\n  z-index: -1;\n  top: 5px;\n  bottom: 5px;\n  left: 5px;\n  right: 5px;\n}\n\n.country-search__label {\n  font-size: 1.5em;\n  text-align: center;\n  margin: 2em 0 1em 0;\n}\n\n.country-search__input {\n  background-color: #fefefe;\n  border: 2px solid #7a7a7a;\n  border-radius: 2px;\n  padding: 0.6em;\n  font-size: 1.5em;\n  margin: 1em 0;\n  text-align: center;\n}\n\n.country-search__button {\n  font-size: 1.4em;\n  font-weight: bold;\n  background: #fefefe;\n  color: #324259;\n  border-radius: 8px;\n  margin: 1em 0 2em 0;\n  padding: 0.6em 1em;\n}\n\n.country-search__info {\n  font-size: 1em;\n}", ""]);
 
 // exports
 
@@ -25808,7 +25844,7 @@ exports = module.exports = __webpack_require__(3)(false);
 
 
 // module
-exports.push([module.i, ".countryInfo {\n  width: 24em;\n  padding: 1em;\n  margin: 2em;\n  font-size: 12px;\n  background: #cccccc;\n  border-radius: 5px;\n  -webkit-box-shadow: 0px 0px 17px 5px #999999;\n  -moz-box-shadow: 0px 0px 17px 5px #999999;\n  box-shadow: 0px 0px 17px 5px #999999;\n}\n\n.countryInfo .countryInfo_text {\n  font-size: 1em;\n  margin: 1em auto;\n  width: 20em;\n  color: #0a0a0a;\n}\n\n.countryInfo .countryInfo_text .countryInfo_name {\n  font-size: 2em;\n  padding: 0.5em;\n  text-align: center;\n}\n\n.countryInfo .countryInfo_text .countryInfo_capital {\n  font-size: 1.5em;\n  padding: 8px 5px;\n}\n\n.countryInfo .countryInfo_text .countryInfo_more,\n.countryInfo .countryInfo_text .countryInfo_link {\n  display: block;\n  font-size: 1.2em;\n  padding: 8px 5px;\n  line-height: 1.5em;\n  color: inherit;\n}\n\n.countryInfo .countryInfo_flag {\n  width: 160px;\n  border: 1px solid #0a0a0a;\n  display: block;\n  margin: 10px auto;\n}", ""]);
+exports.push([module.i, ".country-description {\n  width: 24em;\n  padding: 1em;\n  margin: 2em;\n  font-size: 12px;\n  background: #cccccc;\n  border-radius: 5px;\n  -webkit-box-shadow: 0px 0px 17px 5px #999999;\n  -moz-box-shadow: 0px 0px 17px 5px #999999;\n  box-shadow: 0px 0px 17px 5px #999999;\n}\n\n.country-description__text {\n  font-size: 1em;\n  margin: 1em auto;\n  width: 20em;\n  color: #0a0a0a;\n}\n\n.country-description__name {\n  font-size: 2em;\n  padding: 0.5em;\n  text-align: center;\n}\n\n.country-description__capital {\n  font-size: 1.5em;\n  padding: 8px 5px;\n}\n\n.country-description__more,\n.country-description__link {\n  display: block;\n  font-size: 1.2em;\n  padding: 8px 5px;\n  line-height: 1.5em;\n  color: inherit;\n}\n\n.country-description__flag {\n  width: 160px;\n  border: 1px solid #0a0a0a;\n  display: block;\n  margin: 10px auto;\n}", ""]);
 
 // exports
 
@@ -25886,7 +25922,7 @@ exports = module.exports = __webpack_require__(3)(false);
 
 
 // module
-exports.push([module.i, ".map {\n  background-color: #324259;\n  font-size: 12px;\n  padding: 4em;\n}\n\n.map .map_box {\n  width: 1020px;\n  margin: 0 auto;\n  position: relative;\n}\n\n.map .map_box .map_buttons {\n  display: inline-block;\n  position: absolute;\n  z-index: 1;\n}\n\n.map .map_box .map_buttons .map_button {\n  width: 1.8em;\n  height: 1.8em;\n  font-size: 1.5em;\n  font-weight: bold;\n  color: #7a7a7a;\n  background: #fefefe;\n  border: 2px solid #7a7a7a;\n  border-radius: 50%;\n  margin: 0.7em;\n  display: block;\n}", ""]);
+exports.push([module.i, ".country-map {\n  background-color: #324259;\n  font-size: 12px;\n  padding: 4em;\n}\n\n.country-map__box {\n  width: 1020px;\n  margin: 0 auto;\n  position: relative;\n}\n\n.country-map__buttons {\n  display: inline-block;\n  position: absolute;\n  z-index: 1;\n}\n\n.country-map__button {\n  width: 1.8em;\n  height: 1.8em;\n  font-size: 1.4em;\n  font-weight: bold;\n  color: #7a7a7a;\n  background: #fefefe;\n  border: 2px solid #7a7a7a;\n  border-radius: 50%;\n  margin: 0.7em;\n  display: block;\n}", ""]);
 
 // exports
 
@@ -25950,7 +25986,7 @@ exports = module.exports = __webpack_require__(3)(false);
 
 
 // module
-exports.push([module.i, ".main {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}", ""]);
+exports.push([module.i, ".one-country {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}", ""]);
 
 // exports
 
@@ -26025,12 +26061,14 @@ var ManyCountriesApp = function (_React$Component) {
         value: function render() {
             return _react2.default.createElement(
                 "div",
-                null,
-                _react2.default.createElement(_CountriesSelect2.default, { searchMethod: this.getData }),
-                _react2.default.createElement(_CountryMap2.default, { country: this.state.countries }),
+                { className: "many-countries" },
+                _react2.default.createElement(_CountriesSelect2.default, {
+                    searchMethod: this.getData }),
+                _react2.default.createElement(_CountryMap2.default, {
+                    country: this.state.countries }),
                 this.state.pending ? null : _react2.default.createElement(
                     "div",
-                    { className: "countriesBox" },
+                    { className: "many-countries__box" },
                     this.state.countries.map(function (elem, index) {
                         return _react2.default.createElement(_CountryDescription2.default, { key: index, countryData: elem });
                     })
@@ -26114,23 +26152,24 @@ var CountriesSelect = function (_React$Component) {
 
             return _react2.default.createElement(
                 'div',
-                { className: 'selectForm' },
+                { className: 'countries-select' },
                 _react2.default.createElement(
                     'h3',
-                    { className: 'selectForm_mainTitle' },
+                    { className: 'countries-select__main-title' },
                     'Show the countries selected by:'
                 ),
                 _react2.default.createElement(
                     'form',
-                    { className: 'selectForm_box' },
+                    { className: 'countries-select__box' },
                     _react2.default.createElement(
                         'h3',
-                        { className: 'selectForm_title' },
+                        { className: 'countries-select__title' },
                         'Language'
                     ),
                     _react2.default.createElement(
                         'select',
-                        { className: 'selectForm_select',
+                        {
+                            className: 'countries-select__select',
                             value: this.state.languageSelect,
                             onChange: this.handleLanguageSelect },
                         _react2.default.createElement(
@@ -26176,7 +26215,9 @@ var CountriesSelect = function (_React$Component) {
                     ),
                     _react2.default.createElement(
                         'button',
-                        { className: 'selectForm_button', onClick: function onClick(e) {
+                        {
+                            className: 'countries-select__button',
+                            onClick: function onClick(e) {
                                 return _this2.handleClick(e, 'lang');
                             } },
                         'OK'
@@ -26184,15 +26225,16 @@ var CountriesSelect = function (_React$Component) {
                 ),
                 _react2.default.createElement(
                     'form',
-                    { className: 'selectForm_box' },
+                    { className: 'countries-select__box' },
                     _react2.default.createElement(
                         'h3',
-                        { className: 'selectForm_title' },
+                        { className: 'countries-select__title' },
                         'Region'
                     ),
                     _react2.default.createElement(
                         'select',
-                        { className: 'selectForm_select',
+                        {
+                            className: 'countries-select__select',
                             value: this.state.regionSelect,
                             onChange: this.handleRegionSelect },
                         _react2.default.createElement(
@@ -26228,7 +26270,9 @@ var CountriesSelect = function (_React$Component) {
                     ),
                     _react2.default.createElement(
                         'button',
-                        { className: 'selectForm_button', onClick: function onClick(e) {
+                        {
+                            className: 'countries-select__button',
+                            onClick: function onClick(e) {
                                 return _this2.handleClick(e, 'region');
                             } },
                         'OK'
@@ -26302,7 +26346,7 @@ exports = module.exports = __webpack_require__(3)(false);
 
 
 // module
-exports.push([module.i, ".selectForm {\n  width: 700px;\n  margin: 1em auto;\n  font-size: 12px;\n  display: flex;\n  justify-content: center;\n  align-content: space-around;\n  flex-wrap: wrap;\n  color: #7a7a7a;\n}\n\n.selectForm .selectForm_mainTitle {\n  flex: 100%;\n  font-size: 2em;\n  margin: 1em;\n  text-align: center;\n}\n\n.selectForm .selectForm_box {\n  width: 22em;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-evenly;\n  align-items: center;\n  margin: 1em;\n  border-radius: 5px;\n  background: #7a7a7a;\n  color: #fefefe;\n}\n\n.selectForm .selectForm_box .selectForm_title {\n  font-size: 2em;\n  text-align: center;\n  margin: 1em 0;\n}\n\n.selectForm .selectForm_box .selectForm_select {\n  font-size: 1.3em;\n  padding: 0.5em;\n  margin: 1em 0;\n}\n\n.selectForm .selectForm_box .selectForm_button {\n  font-size: 1.4em;\n  padding: 0.6em 1.2em;\n  margin: 1em;\n  font-weight: bold;\n  background: #fefefe;\n  color: #324259;\n  border-radius: 8px;\n}", ""]);
+exports.push([module.i, ".countries-select {\n  width: 700px;\n  margin: 1em auto;\n  font-size: 12px;\n  display: flex;\n  justify-content: center;\n  align-content: space-around;\n  flex-wrap: wrap;\n  color: #7a7a7a;\n}\n\n.countries-select__main-title {\n  flex: 100%;\n  font-size: 2em;\n  margin: 1em;\n  text-align: center;\n}\n\n.countries-select__box {\n  width: 22em;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-evenly;\n  align-items: center;\n  margin: 1em;\n  border-radius: 5px;\n  background: #7a7a7a;\n  color: #fefefe;\n}\n\n.countries-select__title {\n  font-size: 2em;\n  text-align: center;\n  margin: 1em 0;\n}\n\n.countries-select__select {\n  font-size: 1.3em;\n  padding: 0.5em;\n  margin: 1em 0;\n}\n\n.countries-select__button {\n  font-size: 1.4em;\n  padding: 0.6em 1.2em;\n  margin: 1em;\n  font-weight: bold;\n  background: #fefefe;\n  color: #324259;\n  border-radius: 8px;\n}", ""]);
 
 // exports
 
@@ -26366,7 +26410,7 @@ exports = module.exports = __webpack_require__(3)(false);
 
 
 // module
-exports.push([module.i, ".countriesBox {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n}", ""]);
+exports.push([module.i, ".many-countries__box {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n}", ""]);
 
 // exports
 
@@ -26477,20 +26521,31 @@ var CountryGameApp = function (_React$Component) {
     _createClass(CountryGameApp, [{
         key: "render",
         value: function render() {
+            var _state = this.state,
+                score = _state.score,
+                tip = _state.tip,
+                properAnswer = _state.properAnswer,
+                randomCountry = _state.randomCountry;
+
+
             return _react2.default.createElement(
                 "div",
                 null,
                 _react2.default.createElement(
                     "div",
-                    { className: "game" },
-                    _react2.default.createElement(_CountryGameStart2.default, { clickMethod: this.getRandomCountry, score: this.state.score }),
+                    { className: "country-game" },
+                    _react2.default.createElement(_CountryGameStart2.default, {
+                        clickMethod: this.getRandomCountry,
+                        score: score }),
                     _react2.default.createElement(_CountryGameAnswer2.default, {
                         methodForCheck: this.checkAnswer,
                         methodForTip: this.giveTip,
-                        tip: this.state.tip }),
-                    this.state.properAnswer && _react2.default.createElement(_CountryDescription2.default, { countryData: this.state.randomCountry })
+                        tip: tip }),
+                    this.state.properAnswer && _react2.default.createElement(_CountryDescription2.default, {
+                        countryData: randomCountry })
                 ),
-                _react2.default.createElement(_CountryMap2.default, { country: this.state.randomCountry })
+                _react2.default.createElement(_CountryMap2.default, {
+                    country: this.state.randomCountry })
             );
         }
     }]);
@@ -26552,26 +26607,30 @@ var CountryGameStart = function (_React$Component) {
         value: function render() {
             return _react2.default.createElement(
                 'div',
-                { className: 'game_start' },
+                { className: 'country-game-start' },
                 _react2.default.createElement(
                     'p',
-                    { className: 'game_info' },
-                    'Computer will select one country and show it on the map.'
+                    {
+                        className: 'country-game-start__info' },
+                    'Computer will draw one country and show it on the map.'
                 ),
                 _react2.default.createElement(
                     'p',
-                    { className: 'game_info' },
-                    ' Your task is to write the name of this country.'
+                    {
+                        className: 'country-game-start__info' },
+                    'Your task is to write the name of this country in the brackets.'
                 ),
                 _react2.default.createElement(
                     'button',
-                    { className: 'game_button',
+                    {
+                        className: 'country-game-start__button',
                         onClick: this.handleClick },
                     'Select the country'
                 ),
                 _react2.default.createElement(
                     'span',
-                    { className: 'game_score' },
+                    {
+                        className: 'country-game-start__score' },
                     'Score: ',
                     this.props.score
                 )
@@ -26643,7 +26702,7 @@ exports = module.exports = __webpack_require__(3)(false);
 
 
 // module
-exports.push([module.i, ".game_start {\n  width: 26em;\n  font-size: 12px;\n  margin: 1em;\n  padding: 1em;\n  border-radius: 5px;\n  color: #fefefe;\n  background: #7a7a7a;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-evenly;\n  align-items: center;\n}\n\n.game_start .game_info {\n  font-size: 1.5em;\n  padding: 0 1em;\n}\n\n.game_start .game_button {\n  font-size: 1.4em;\n  margin: 1em;\n  padding: 0.5em 1em;\n  font-weight: bold;\n  background: #fefefe;\n  color: #324259;\n  border-radius: 8px;\n}\n\n.game_start .game_score {\n  text-align: center;\n  font-size: 2em;\n}", ""]);
+exports.push([module.i, ".country-game-start {\n  width: 26em;\n  font-size: 12px;\n  margin: 1em;\n  padding: 1em;\n  border-radius: 5px;\n  color: #fefefe;\n  background: #7a7a7a;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-evenly;\n  align-items: center;\n}\n\n.country-game-start__info {\n  font-size: 1.5em;\n  padding: 0 1em;\n}\n\n.country-game-start__button {\n  font-size: 1.4em;\n  margin: 1em;\n  padding: 0.5em 1em;\n  font-weight: bold;\n  background: #fefefe;\n  color: #324259;\n  border-radius: 8px;\n}\n\n.country-game-start__score {\n  text-align: center;\n  font-size: 2em;\n}", ""]);
 
 // exports
 
@@ -26716,35 +26775,44 @@ var CountryGameAnswer = function (_React$Component) {
         value: function render() {
             return _react2.default.createElement(
                 'form',
-                { className: 'game_answer' },
+                { className: 'country-game-answer' },
                 _react2.default.createElement(
                     'label',
-                    { htmlFor: 'answer', className: 'game_label' },
+                    {
+                        htmlFor: 'answer',
+                        className: 'country-game-answer__label' },
                     'What is the name of the country?'
                 ),
-                _react2.default.createElement('input', { id: 'answer', type: 'text', className: 'game_input',
+                _react2.default.createElement('input', {
+                    id: 'answer',
+                    type: 'text',
+                    className: 'country-game-answer__input',
                     value: this.state.inputValue,
                     onChange: this.handleInputChange }),
                 _react2.default.createElement(
                     'button',
-                    { className: 'game_button',
+                    {
+                        className: 'country-game-answer__button',
                         onClick: this.handleCheckClick },
                     'Check'
                 ),
                 _react2.default.createElement(
                     'p',
-                    { className: 'game_text' },
+                    {
+                        className: 'country-game-answer__text' },
                     'or'
                 ),
                 _react2.default.createElement(
                     'button',
-                    { className: 'game_button',
+                    {
+                        className: 'country-game-answer__button',
                         onClick: this.handleTipClick },
                     'I want a tip'
                 ),
                 _react2.default.createElement(
                     'p',
-                    { className: 'game_text' },
+                    {
+                        className: 'country-game-answer__text' },
                     this.props.tip
                 ),
                 this.props.children
@@ -26816,7 +26884,7 @@ exports = module.exports = __webpack_require__(3)(false);
 
 
 // module
-exports.push([module.i, ".game_answer {\n  width: 300px;\n  font-size: 12px;\n  margin: 1em;\n  padding: 1.6;\n  border-radius: 5px;\n  color: #fefefe;\n  background: #7a7a7a;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-evenly;\n  align-items: center;\n}\n\n.game_answer .game_label,\n.game_answer .game_input {\n  font-size: 1.5em;\n  text-align: center;\n  margin: 0.8em;\n}\n\n.game_answer .game_text {\n  font-size: 1.5em;\n  text-align: center;\n  margin: 0 1em 1em 1em;\n  line-height: 1.5em;\n}\n\n.game_answer .game_button {\n  font-size: 1.4em;\n  margin: 1em;\n  padding: 0.5em 1em;\n  font-weight: bold;\n  background: #fefefe;\n  color: #324259;\n  border-radius: 8px;\n}", ""]);
+exports.push([module.i, ".country-game-answer {\n  width: 300px;\n  font-size: 12px;\n  margin: 1em;\n  padding: 1.6;\n  border-radius: 5px;\n  color: #fefefe;\n  background: #7a7a7a;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-evenly;\n  align-items: center;\n}\n\n.country-game-answer__label,\n.country-game-answer__input {\n  font-size: 1.5em;\n  text-align: center;\n  margin: 0.8em;\n}\n\n.country-game-answer__text {\n  font-size: 1.5em;\n  text-align: center;\n  margin: 0 1em 1em 1em;\n  line-height: 1.5em;\n}\n\n.country-game-answer__button {\n  font-size: 1.4em;\n  margin: 1em;\n  padding: 0.5em 1em;\n  font-weight: bold;\n  background: #fefefe;\n  color: #324259;\n  border-radius: 8px;\n}", ""]);
 
 // exports
 
@@ -26880,7 +26948,7 @@ exports = module.exports = __webpack_require__(3)(false);
 
 
 // module
-exports.push([module.i, ".game {\n  display: flex;\n  justify-content: center;\n}", ""]);
+exports.push([module.i, ".country-game {\n  display: flex;\n  justify-content: center;\n}", ""]);
 
 // exports
 
@@ -26889,8 +26957,130 @@ exports.push([module.i, ".game {\n  display: flex;\n  justify-content: center;\n
 /* 105 */
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
 
-var content = __webpack_require__(106);
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+__webpack_require__(106);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var NotFound = function (_React$Component) {
+    _inherits(NotFound, _React$Component);
+
+    function NotFound() {
+        _classCallCheck(this, NotFound);
+
+        return _possibleConstructorReturn(this, (NotFound.__proto__ || Object.getPrototypeOf(NotFound)).apply(this, arguments));
+    }
+
+    _createClass(NotFound, [{
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                'div',
+                { className: 'not-found' },
+                _react2.default.createElement(
+                    'p',
+                    { className: 'not-found__info' },
+                    'There is no such page.',
+                    _react2.default.createElement('br', null),
+                    'Please choose something from the navigation - on top of the page.'
+                )
+            );
+        }
+    }]);
+
+    return NotFound;
+}(_react2.default.Component);
+
+exports.default = NotFound;
+
+/***/ }),
+/* 106 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(107);
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(4)(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {
+	module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/resolve-url-loader/index.js!../../../node_modules/sass-loader/lib/loader.js!./NotFound.scss", function() {
+		var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/resolve-url-loader/index.js!../../../node_modules/sass-loader/lib/loader.js!./NotFound.scss");
+
+		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 107 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(3)(false);
+// imports
+
+
+// module
+exports.push([module.i, ".not-found {\n  display: flex;\n  justify-content: center;\n  font-size: 12px;\n}\n\n.not-found__info {\n  font-size: 2em;\n  line-height: 2.5em;\n  width: 30em;\n  color: #324259;\n  text-align: center;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+/* 108 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(109);
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -26936,7 +27126,7 @@ if(false) {
 }
 
 /***/ }),
-/* 106 */
+/* 109 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(3)(false);
@@ -26950,11 +27140,11 @@ exports.push([module.i, "* {\n  font-family: 'Lato', sans-serif;\n}", ""]);
 
 
 /***/ }),
-/* 107 */
+/* 110 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(108);
+var content = __webpack_require__(111);
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -27000,7 +27190,7 @@ if(false) {
 }
 
 /***/ }),
-/* 108 */
+/* 111 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(3)(false);
