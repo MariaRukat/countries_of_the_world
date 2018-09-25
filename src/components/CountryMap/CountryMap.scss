@@ -1,29 +1,27 @@
-
-.map {
+.country-map {
     background-color: #324259;
     font-size: 12px;
     padding: 4em;
-    .map_box {
+    &__box {
         width: 1020px;
         margin: 0 auto;
         position: relative;
-        .map_buttons {
-            display: inline-block;
-            position: absolute;
-            z-index: 1;
-            .map_button {
-                width: 1.8em;
-                height: 1.8em;
-                font-size: 1.5em;
-                font-weight: bold;
-                color: #7a7a7a;
-                background: #fefefe;
-                border: 2px solid #7a7a7a;
-                border-radius: 50%;
-                margin: 0.7em;
-                display: block;
-            }
-        }
     }
-
+    &__buttons {
+        display: inline-block;
+        position: absolute;
+        z-index: 1;
+    }
+    &__button {
+        width: 1.8em;
+        height: 1.8em;
+        font-size: 1.4em;
+        font-weight: bold;
+        color: #7a7a7a;
+        background: #fefefe;
+        border: 2px solid #7a7a7a;
+        border-radius: 50%;
+        margin: 0.7em;
+        display: block;
+    }
 }

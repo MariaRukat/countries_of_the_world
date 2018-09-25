@@ -34,17 +34,34 @@ export default class CountryGameAnswer extends React.Component{
 
     render(){
         return (
-            <form className="game_answer">
-                <label htmlFor="answer" className="game_label">What is the name of the country?</label>
-                <input  id="answer" type="text" className="game_input" 
-                        value={this.state.inputValue} 
-                        onChange={this.handleInputChange}/>
-                <button className="game_button" 
-                        onClick={this.handleCheckClick}>Check</button>
-                <p className="game_text">or</p>
-                <button className="game_button" 
-                        onClick={this.handleTipClick}>I want a tip</button>
-                <p className="game_text">{this.props.tip}</p>
+            <form className="country-game-answer">
+                <label 
+                    htmlFor="answer" 
+                    className="country-game-answer__label">
+                    What is the name of the country?
+                </label>
+                <input  
+                    id="answer" 
+                    type="text" 
+                    className="country-game-answer__input" 
+                    value={this.state.inputValue} 
+                    onChange={this.handleInputChange}/>
+                <button 
+                    className="country-game-answer__button" 
+                    onClick={this.handleCheckClick}>
+                    Check
+                </button>
+                <p 
+                    className="country-game-answer__text">
+                    or
+                </p>
+                <button 
+                    className="country-game-answer__button" 
+                    onClick={this.handleTipClick}>I want a tip</button>
+                <p 
+                    className="country-game-answer__text">
+                    {this.props.tip}
+                </p>
                 {this.props.children}
             </form>
         )

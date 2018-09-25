@@ -28,18 +28,19 @@ export default class ManyCountriesApp extends React.Component{
 
     render(){
         return (
-            <div>
-                <CountriesSelect searchMethod={this.getData}/>
-                <CountryMap country={this.state.countries}/>
+            <div className="many-countries">
+                <CountriesSelect 
+                    searchMethod={this.getData}/>
+                <CountryMap 
+                    country={this.state.countries}/>
                 {this.state.pending
                     ? null
-                    : <div className="countriesBox">
+                    : <div className="many-countries__box">
                         {this.state.countries.map( (elem,index) => {
                         return <CountryDescription key={index} countryData={elem} />
                         })}
                     </div>
                 }
-                
             </div>
         )
     }

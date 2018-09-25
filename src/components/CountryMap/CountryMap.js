@@ -22,16 +22,22 @@ export default class CountryMap extends React.Component {
         }
 
         return (
-            <div className="map">
-                <div className="map_box">
-                    <div className="map_buttons">
-                        <button className="map_button" onClick={event => this.Viewer.zoomOnViewerCenter(1.1)}>
+            <div className="country-map">
+                <div className="country-map__box">
+                    <div className="country-map__buttons">
+                        <button 
+                            className="country-map__button" 
+                            onClick={event => this.Viewer.zoomOnViewerCenter(1.1)}>
                             <i className="fas fa-plus"></i>
                         </button>
-                        <button className="map_button" onClick={event => this.Viewer.zoomOnViewerCenter(0.9)}>
-                                <i className="fas fa-minus"></i>
+                        <button 
+                            className="country-map__button" 
+                            onClick={event => this.Viewer.zoomOnViewerCenter(0.9)}>
+                            <i className="fas fa-minus"></i>
                         </button>
-                        <button className="map_button" onClick={event => this.Viewer.fitToViewer()}>
+                        <button 
+                            className="country-map__button" 
+                            onClick={event => this.Viewer.fitToViewer()}>
                             <i className="fas fa-home"></i>
                         </button>
                     </div>

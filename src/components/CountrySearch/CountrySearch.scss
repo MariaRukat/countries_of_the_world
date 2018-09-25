@@ -1,4 +1,4 @@
-.search {
+.country-search {
     width: 24em;
     font-size: 12px;
     margin: 1em;
@@ -21,13 +21,12 @@
         left: 5px;
         right: 5px;
     }
-    .search_label {
+    &__label {
         font-size: 1.5em;
         text-align: center;
         margin: 2em 0 1em 0;
     }
-
-    .search_input {
+    &__input {
         background-color: #fefefe;
         border: 2px solid #7a7a7a;
         border-radius: 2px;
@@ -36,8 +35,7 @@
         margin: 1em 0;
         text-align: center;
     }
-
-    .search_button {
+    &__button {
         font-size: 1.4em;
         font-weight: bold;
         background: #fefefe;
@@ -46,8 +44,7 @@
         margin: 1em 0 2em 0;
         padding: 0.6em 1em;
     }
-
-    .search_info{
+    &__info{
         font-size: 1em;
     }
 }

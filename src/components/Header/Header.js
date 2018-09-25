@@ -8,21 +8,36 @@ export default class Header extends React.Component{
         return (
             <header className="header">
                 <nav>
-                    <ul className="header_navigationList">
+                    <ul className="header__navigation-list">
                         <li>
-                            <NavLink to="/learn" className="header_link" activeClassName="header_link--active">Learn</NavLink>
+                            <NavLink 
+                                to="/learn" 
+                                className="header__link" 
+                                activeClassName="header__link--active">
+                                Learn
+                        </NavLink>
                         </li>
                         <li>
-                            <NavLink to="/discover" className="header_link" activeClassName="header_link--active">Discover</NavLink>
+                            <NavLink 
+                                to="/discover" 
+                                className="header__link" 
+                                activeClassName="header__link--active">
+                                Discover
+                            </NavLink>
                         </li>      
                         <li>
-                            <NavLink to="/play" className="header_link" activeClassName="header_link--active">Play</NavLink>
+                            <NavLink 
+                                to="/play" 
+                                className="header__link" 
+                                activeClassName="header__link--active">
+                                Play
+                            </NavLink>
                         </li>  
                     </ul>
                 </nav>
-                <div className="header_titleBox">
+                <div className="header__title-box">
                     <i className="fas fa-globe-americas"></i>
-                    <h1 className="header_title">Countries of the world</h1>
+                    <h1 className="header__title">Countries of the world</h1>
                     <i className="fas fa-globe-africa"></i>
                 </div>
             </header>

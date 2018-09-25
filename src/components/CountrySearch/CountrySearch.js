@@ -27,14 +27,23 @@ export default class CountrySearch extends React.Component{
 
     render(){
         return (
-            <form className="search">
-                <label  htmlFor="countryName" 
-                        className="search_label">Write the country name in:</label>
-                <input  id="countryName" type="text" className="search_input" 
-                        value={this.state.inputValue} onChange={this.handleInputChange} />
-                {<p className="search_info">{this.props.error}</p>}
-                <button className="search_button" 
-                        onClick={this.handleClick}>Show the country</button>
+            <form className="country-search">
+                <label  
+                    htmlFor="countryName" 
+                    className="country-search__label">
+                    Write the country name in:
+                </label>
+                <input 
+                    id="countryName" type="text" 
+                    className="country-search__input" 
+                    value={this.state.inputValue} 
+                    onChange={this.handleInputChange} />
+                <p className="country-search__info">{this.props.error}</p>
+                <button 
+                    className="country-search__button" 
+                    onClick={this.handleClick}>
+                    Show the country
+                </button>
             </form>
         )
     }

@@ -60,17 +60,30 @@ export default class CountryGameApp extends React.Component{
     }
 
     render(){
+        const {
+            score,
+            tip,
+            properAnswer,
+            randomCountry,
+        } = this.state;
+
         return (
             <div>
-                <div className="game">
-                    <CountryGameStart clickMethod={this.getRandomCountry} score={this.state.score} />
+                <div className="country-game">
+                    <CountryGameStart 
+                        clickMethod={this.getRandomCountry} 
+                        score={score}/>
                     <CountryGameAnswer 
                         methodForCheck={this.checkAnswer} 
                         methodForTip={this.giveTip} 
-                        tip={this.state.tip}/>
-                    {this.state.properAnswer && <CountryDescription countryData={this.state.randomCountry}/>}
+                        tip={tip}/>
+                    {this.state.properAnswer && ( 
+                        <CountryDescription 
+                            countryData={randomCountry}/>
+                    )}
                 </div>
-                <CountryMap country={this.state.randomCountry} />
+                <CountryMap 
+                    country={this.state.randomCountry} />
             </div>
         )
     }

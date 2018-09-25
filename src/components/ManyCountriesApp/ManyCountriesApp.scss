@@ -1,5 +1,7 @@
-.countriesBox {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.many-countries{
+    &__box {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }

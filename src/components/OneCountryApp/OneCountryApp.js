@@ -32,20 +32,22 @@ export default class OneCountryApp extends React.Component{
                         })
                     }
                 })
-    }
-    
+    }    
 
     render(){
         return (
             <main>
-                <div className="main">
-                    <CountrySearch searchMethod={this.getData} error={this.state.errorInfo}/>
+                <div className="one-country">
+                    <CountrySearch 
+                        searchMethod={this.getData} 
+                        error={this.state.errorInfo}/>
                     {!this.state.pending
                         ? <CountryDescription countryData={this.state.country}/>
                         : null
                     }
                 </div>
-                <CountryMap country={this.state.country}/>
+                <CountryMap 
+                    country={this.state.country}/>
             </main>
         )
     }
